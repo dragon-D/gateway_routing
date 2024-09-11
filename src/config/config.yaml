@@ -1,0 +1,16 @@
+---
+server:
+  -
+    protocol: http
+    address: "0.0.0.0:6188"
+    upstream:
+      - "127.0.0.1:8080"
+    location:
+      -
+        match_path: /api
+        proxy_host: "127.0.0.1:8080"
+        proxy_url: "/books"
+      -
+        match_path: /static
+        proxy_host: null
+        proxy_url: /api/role/memberRole

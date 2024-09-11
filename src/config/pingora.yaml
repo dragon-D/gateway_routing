@@ -1,0 +1,6 @@
+---
+pid_file: /tmp/pingora.pid
+daemon: false
+upgrade_sock: /tmp/pingora_upgrade.sock
+threads: 1
+server_path: /Users/dragon/dragon/word/rustfile/load_balancer/src/config/config.yaml

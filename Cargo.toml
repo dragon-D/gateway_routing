@@ -1,0 +1,37 @@
+[package]
+name = "load_balancer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+#[[bin]]
+#path = "src/b.rs"
+#name = "b"
+#
+#[[bin]]
+#path = "src/main.rs"
+#name = "l"
+
+[dependencies]
+pingora = {version = "0.1", features = ["lb"]}
+pingora-core = {version = "0.1"}
+pingora-proxy = {version = "0.1"}
+pingora-load-balancing = {version = "0.1"}
+pingora-http = {version = "0.1"}
+
+
+env_logger = "0.9"
+async-trait = "0.1.77"
+log = "0.4.21"
+structopt = "0.3.26"
+prometheus = "0.13.3"
+
+http = "1.1"
+serde_yaml = "0.9.32"
+serde = { version = "1.0.197", features = ["derive"] }
+clap = "4.5.0"
+rand = "0.8.5"
+anyhow = "1.0.44"
+
+#rush_core = "0.1.0"
